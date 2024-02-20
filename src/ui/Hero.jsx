@@ -35,7 +35,7 @@ export const Hero = () => {
                     x: { duration: 0.5 }
                 }}>
                 <div className="flex space-x-20 items-center mt-20">
-                    <div className=" lg:top-0 lg:left-0 lg:relative xs:absolute xs:top-[10%] xs:left-[10%] sm:absolute  sm:top-[10%] sm:left-[23.5%] md:left-[30%]">
+                    <div className=" lg:top-0 lg:left-0 lg:relative xs:absolute xs:top-[10%] xs:left-[10%] sm:absolute  sm:top-[5%] sm:left-[23.5%] md:left-[30%]">
                         <div className="flex flex-col gap-5 sm:items-center lg:items-start" >
                             <h3 className="sm:text-5xl md:text-6xl lg:text-8xl text-white font-bold">I DESIGN </h3>
                             <div className="flex flex-col lg:flex-row items-center gap-5">
