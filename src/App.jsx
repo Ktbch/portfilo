@@ -4,7 +4,7 @@ import { Profilio } from './pages/Profilio';
 
 function App() {
   return (
-    <div className='text-white bg-[#050D25] h-screen font-popins'>
+    <div className='text-white bg-[#050D25] h-[500vh] font-popins'>
       <Profilio />
     </div>
   );
