@@ -56,7 +56,7 @@ export const Hero = () => {
                                 able to complete task at my best. as a desingner i am also
                                 passionate about the user first in any of my design
                             </p>
-                            <div className="flex flex-col lg:relative lg:top-0 lg:left-0 lg:flex-col sm:absolute gap-3 sm:top-[310%] sm:flex-row">
+                            <div className="flex flex-col lg:relative lg:top-0 lg:left-0 lg:flex-col sm:absolute gap-3 sm:top-[350%] sm:flex-row">
                                 <div className="">
                                     <h3 className="tracking-tighter sm:text-sm sm:text-[#58fff5] lg:text-white flex">OLATUBOSUN SAMUEL</h3>
                                     <p className="tracking-tighter sm:text-sm  font-cursive lg:text-[#58fff5] ">ui/ux and graphic desingner</p>
