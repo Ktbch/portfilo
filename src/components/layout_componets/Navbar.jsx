@@ -15,7 +15,7 @@ export const Navbar = () => {
     const inActive = 'cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'
 
     return (
-        <nav className=" sm:shadow-none  lg:shadow-sm  m-auto py-10 px-10 flex justify-between items-center dark:sahdow-none ">
+        <nav className=" sm:shadow-none  lg:shadow-sm  m-auto py-8 px-8 flex justify-between items-center dark:sahdow-none ">
             <div className='text-color3 dark:text-color2 cursor-pointer'>
                 DESIGNS.IO
             </div>
