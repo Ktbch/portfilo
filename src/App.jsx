@@ -7,7 +7,7 @@ import { BottomNav, Navbar } from './components/layout_componets';
 
 function App() {
   return (
-    <div className='text-white bg-[#050D25] h-[500vh] font-popins'>
+    <div className='bg-[] dark:text-white dark:bg-[#050D25] h-[500vh] font-popins transition-all'>
       <div>
         <Navbar />
         <BottomNav />
