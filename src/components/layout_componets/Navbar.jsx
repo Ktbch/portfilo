@@ -19,7 +19,7 @@ export const Navbar = () => {
             <div className='text-color3 dark:text-color2 cursor-pointer'>
                 DESIGNS.IO
             </div>
-            <ul className={`${!menu ? 'translate-x-full' : 'translate-x-0'} absolute shadow-md  dark:shadow-color1  w-full py-10 top-[10%] left-[30%] flex flex-col mt-10 space-y-10 lg:translate-x-0 lg:py-0 lg:shadow-none lg:space-y-0 lg:top-0 lg:left-0 lg:relative lg:mt-0  lg:flex lg:flex-row  max-w-xl m-auto  items-center lg:space-x-20 justify-between transition-all`}>
+            <ul className={`${!menu ? 'hidden translate-x-full' : 'flex translate-x-0'} absolute shadow-md bg-lightMode1-bgColorWhite dark:bg-color1 dark:shadow-color1  w-full py-10 top-[10%] left-[30%] flex flex-col mt-10 space-y-10 lg:translate-x-0 lg:py-0 lg:shadow-none lg:space-y-0 lg:top-0 lg:left-0 lg:relative lg:mt-0  lg:flex lg:flex-row  max-w-xl m-auto  items-center lg:space-x-20 justify-between transition-all`}>
                 <li><a href='' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>Home</a></li>
                 <li><a href='' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all' >Contact</a></li>
                 <li><a href='' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>About Me</a></li>

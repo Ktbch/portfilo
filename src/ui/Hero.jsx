@@ -27,51 +27,24 @@ export const Hero = () => {
 
     return (
         <section className="max-w-7xl mx-auto my-auto pt-5">
-            <Animation initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                    ease: "linear",
-                    duration: 0.5,
-                    x: { duration: 0.5 }
-                }}>
-                <div className="flex space-x-20 items-center mt-20">
-                    <div className=" lg:top-0 lg:left-0 lg:relative xs:absolute xs:top-[10%] xs:left-[10%] sm:absolute  sm:top-[5%] sm:left-[23.5%] md:left-[30%]">
-                        <div className="flex flex-col gap-5 sm:items-center lg:items-start" >
-                            <h3 className="sm:text-5xl md:text-6xl lg:text-8xl text-white font-bold">I DESIGN </h3>
-                            <div className="flex flex-col lg:flex-row items-center gap-5">
-                                <h3 className="text-white text-6xl font-bold lg:text-8xl sm:text-5xl md:text-6xl">YOUR </h3> <Animation initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{
-                                        ease: "linear",
-                                        duration: 0.5,
-                                        x: { duration: 0.5 }
-                                    }}
-                                ><p className="italic font-cursive text-[#58fff5] font-light sm:text-4xl lg:text-5xl">{carousel}</p>
-                                </Animation>
-                            </div>
-                            <p className="lg:relative lg:top-0 lg:left-0 sm:absolute sm:top-[120%] md:absolute md:top-[110%] sm:tracking-wide md:left-[20] lg:text-xl lg:tracking-tight">
-                                my name is olatubosun samuel an artist with ten years
-                                of experience in graphics and two years experience as a
-                                desingner i am passionate and hardworking indivudual who is
-                                able to complete task at my best. as a desingner i am also
-                                passionate about the user first in any of my design
-                            </p>
-                            <div className="flex flex-col lg:relative lg:top-0 lg:left-0 lg:flex-col sm:absolute gap-3 sm:top-[350%] sm:flex-row">
-                                <div className="">
-                                    <h3 className="tracking-tighter sm:text-sm sm:text-[#58fff5] lg:text-white flex">OLATUBOSUN SAMUEL</h3>
-                                    <p className="tracking-tighter sm:text-sm  font-cursive lg:text-[#58fff5] ">ui/ux and graphic desingner</p>
-                                </div>
-                                <div className=" ">
-                                    <button className="p-3 w-[200%] sm:w-[150%] sm:text-sm rounded-xl bg-gradient-to-r from-[#58fff5] to-[#2489e2] shadow-2xl shadow-[#58fff5] ">Hire Me</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="text-white hidden lg:flex" >
-                        Image
-                    </div>
+            <div className="container space-y-10 m-auto
+            lg:flex lg:flex-row lg:mt-10 lg:space-x-10 items-center">
+                <div className=" flex flex-col flex-wrap space-y-7 items-center lg:items-start">
+                    <p className="text-5xl lg:text-7xl">I DESIGN</p>
+                    <p className="flex  items-center gap-5 text-5xl lg:text-7xl transition-all">YOUR <span className=" hidden text-4xl lg:block lg:text-5xl font-cursive italic text-color3 dark:text-color2">{carousel}</span></p>
+                    <p className=" lg:hidden text-4xl  lg:text-5xl font-cursive italic text-color3 dark:text-color2">{carousel}</p>
+                    <p className="text-center lg:text-start">
+                        <blockquote>My name is olatubosun an artist with ten years of experience in graphics
+                            And two years as ui/ux designer.</blockquote>
+                        <blockquote>i am a passionate and hardworking individual who is able to complete task at my best.
+                            As a designer i am also passionate about the user first in any design...</blockquote>
+                    </p>
+                    <p className="pt-5 flex flex-col items-center gap-2 text-sm">OLATUBOSUN SAMUEL <span className="text-color3 text-cursive italic dark:text-color2">ui/ux and graphic designer</span></p>
+                    <button className="p-5 rounded-md bg-gradient-to-tr from-color3 to-color2 dark:from-color2 dark:to-color3 hover:from-color2 hover:to-color3 dark:hover:from-color3 dark:hover:to-color2 focus:from-color2 focus:to-color3 dark:focus:from-color3 dark:focus:to-color2 transition-all">
+                        Hire Me
+                    </button>
                 </div>
-            </Animation>
+            </div>
         </section >
     )
 }

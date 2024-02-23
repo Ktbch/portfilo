@@ -9,8 +9,7 @@ function App() {
   return (
     <div className='bg-[] dark:text-white dark:bg-[#050D25] h-[500vh] font-popins transition-all'>
       <div>
-        <Navbar />
-        <BottomNav />
+        <Profilio />
       </div>
     </div>
   );
