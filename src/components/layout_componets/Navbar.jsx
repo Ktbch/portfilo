@@ -30,7 +30,7 @@ export const Navbar = () => {
                 <button onClick={(() => { setDarkMode(!darkMode) })}>
                     {darkMode ? <IoSunny size={20} /> : <IoMoon size={20} />}
                 </button>
-                <div className='lg:hidden' onClick={(() => { setMenu(!menu) })} >
+                <div className='lg:hidden transition-all' onClick={(() => { setMenu(!menu) })} >
                     {menu ? <IoClose size={30} className='transition-all' /> : <IoMenu size={30} className='cursor-pointer transition-all' />}
                 </div>
             </div>

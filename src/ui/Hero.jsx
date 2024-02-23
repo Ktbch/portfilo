@@ -26,7 +26,7 @@ export const Hero = () => {
     }, []);
 
     return (
-        <section className="max-w-7xl mx-auto my-auto pt-5">
+        <section className="max-w-7xl mx-auto my-auto pt-5 pb-40 lg:border-b border-gray-300">
             <div className="container space-y-10 m-auto
             lg:flex lg:flex-row lg:mt-10 lg:space-x-10 items-center">
                 <div className=" flex flex-col flex-wrap space-y-7 items-center lg:items-start">
