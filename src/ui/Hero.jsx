@@ -5,6 +5,7 @@ import { Animation } from "../components/Animation";
 export const Hero = () => {
     const [carousel, setCarousel] = useState('Experience')
 
+
     useEffect(() => {
         const timer = setInterval(() => {
             setCarousel((prevCarousel) => {
