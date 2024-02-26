@@ -2,12 +2,12 @@ import { Navbar } from "../components/layout_componets"
 import { FeaturedProjects } from "../ui/FeaturedProjects"
 import { Hero } from "../ui/Hero"
 
-export const Profilio = () => {
+export const Profilio = ({ isScrolled }) => {
     return (
         <>
-            <Navbar />
-            <Hero />
-            <FeaturedProjects />
+            <Navbar isScrolled={isScrolled} />
+            <Hero isScrolled={isScrolled} />
+            <FeaturedProjects isScrolled={isScrolled} />
         </>
     )
 }

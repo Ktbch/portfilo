@@ -8,6 +8,7 @@ module.exports = {
       cursive: ["cursive", "Cedarville Cursive"],
     },
     screens: {
+      xs: "270px",
       sm: "300px",
       md: "500px",
       lg: "950px",
