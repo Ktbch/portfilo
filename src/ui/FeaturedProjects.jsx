@@ -99,7 +99,7 @@ export const FeaturedProjects = ({ isScrolled }) => {
                 {/* {Todo  scroll animation} */}
                 {projects.map((projex) => {
                     return (
-                        <div key={projex.id} id={projex.id} className={`project-items ${visibility.includes(projex) ? '' : ''} flex flex-col items-center  gap-6 transition-all`} >
+                        <div key={projex.id} id={projex.id} className={` flex flex-col items-center  gap-6 transition-all`} >
                             <h3 className="text-center tracking-tight sm:tracking-normal text-sm lg:text-2xl border-b-2 border-color3 dark:border-color2 p-3 rounded-md">{projex.projectName}</h3>
                             {projex?.subHeading ? < p className="text-center">({projex.subHeading})</p> : ''}
                             <div className={`bg-transparent border-npne lg:border border-slate-300 dark:border-slate-600 p-3 lg:p-10 rounded-lg ${isScrolled ? 'fadeIn' : 'fadeOut'}`}>
