@@ -26,7 +26,7 @@ export const Navbar = () => {
                 <li><a href='#projects' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>Projects</a></li>
             </ul>
             {/* {Todo fix nav bar} */}
-            <div className=' flex space-x-4 items-center'>
+            <div className='fixed right-[10%] flex space-x-4 items-center'>
                 <button onClick={(() => { setDarkMode(!darkMode) })}>
                     {darkMode ? <IoSunny size={20} /> : <IoMoon size={20} />}
                 </button>

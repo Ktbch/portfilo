@@ -24,3 +24,11 @@
 .fadeIn {
     animation: fadeOut 0.5s ease-in-out;
 }
+.main h3 p{
+    transition: all 4s ease-in-out
+}
+.section-hidden{
+    opacity: 0;
+    transform: translateY(8rem);
+    transition: all 5s ease-in;
+}

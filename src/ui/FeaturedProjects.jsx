@@ -1,9 +1,7 @@
 import { Card } from "../components/Card"
 import { imgs } from "../utils/Img"
-import LazyLoad from "react-lazy-load"
 import { IoArrowForward } from 'react-icons/io5'
-import './../App.css'
-import { useRef, useEffect, useState } from "react"
+import { useState } from "react"
 export const FeaturedProjects = ({ isScrolled }) => {
     const projects = [
         {
@@ -49,38 +47,50 @@ export const FeaturedProjects = ({ isScrolled }) => {
         },
     ]
 
-    // const [visibility, setVisibility] = useState([])
-    // const [key, setkey] = useState([])
+    const [showText, setShowText] = useState(false)
+    const project = document.querySelectorAll('.project_section')
+    const intro = document.querySelectorAll('.intro')
 
+    const onProjectObserve = (entries, observer) => {
+        const [entry] = entries
+        if (!entry.isIntersecting) return
+        entry.target.classList.remove('section-hidden')
+        entry.target.classList.remove('blur')
+        observer.unobserve(entry.target)
 
+    }
 
+    const onIntroObserve = (entries, observer) => {
+        const [entry] = entries
+        if (!entry.isIntersecting) return
+        entry.target.classList.remove('section-hidden')
+        entry.target.classList.remove('blur')
+        observer.unobserve(entry.target)
+    }
+    const ProjectObserver = new IntersectionObserver(onProjectObserve, { root: null, threshold: 0.8 })
 
-    // const obseerver = useRef(null)
+    if (project) {
+        project.forEach(pro => {
+            pro.classList.add('blur')
+            ProjectObserver.observe(pro)
+        })
+    }
+    const introObserver = new IntersectionObserver(onIntroObserve, { root: null, threshold: 1 })
 
-    // const setObserver = () => {
-    //     obseerver.current = new IntersectionObserver((enteries) => {
-    //         enteries.forEach((entry) => {
-    //             if (entry.isIntersecting) {
-    //                 setVisibility((prevVisible) => [...prevVisible, entry.target])
-    //             }
-    //         },
-    //             { threshold: 0.5 }
-    //         )
-    //     })
-    //     return () => {
-    //         if (obseerver.current) {
-    //             obseerver.current.disconnect()
-    //         }
-    //     }
-    // }
+    if (intro) {
+        intro.forEach(intros => {
+            introObserver.observe(intros)
+        })
+    }
+    // Todoo put this function in the right place refactor this code
 
     return (
-        <section className="max-w-7xl mx-auto mt-10 py-20 px-10 transition-all">
+        <section className="max-w-7xl mx-auto mt-10 py-20 px-10 ">
             <div className="flex flex-col items-center flex-wrap gap-32 ">
                 <h3 className="text-xl md:text-2xl lg:text-3xl dark:text-lightMode4-bgColorGray border-b-4 pb-4 rounded-md border-color2  dark:border-color3">Featured Projects</h3>
-                <div className="flex flex-col items-center flex-wrap  space-y-5">
-                    <h3 className="pt-16 text-lg md:text-3xl lg:text-4xl tracking-tighter" id="projects">Grapics Design Projects</h3>
-                    <p className=" pt-10 text-sm lg:text-lg tracking-tighter  sm:tracking-tight text-center">
+                <div className={`main flex flex-col items-center flex-wrap  space-y-10 transition-all`} id="design_projects">
+                    <h3 className={` section-hidden intro pt-16 text-lg md:text-3xl lg:text-4xl tracking-tighter transition-transform`}>Grapics Design Projects</h3>
+                    <p className={`  section-hidden intro pt-10 text-sm lg:text-lg tracking-tighter  sm:tracking-tight text-center transition-transform `}>
                         <p>
                             My Graphics Design Encompasses Visually Engaging Flyers
                             And Cohesive Package Design, Ensuring A Consistent Brand Identity
@@ -91,20 +101,20 @@ export const FeaturedProjects = ({ isScrolled }) => {
                         </p>
                     </p>
                     <Card >
-                        <img src={imgs.Tech} alt="" className="w-full lg:w-full lg:h-[500px]" />
+                        <img src={imgs.Tech} alt="" className={`intro blur w-full lg:w-full lg:h-[500px] transition-all`} id='img' />
                     </Card>
 
 
                 </div>
-                {/* {Todo  scroll animation} */}
+
                 {projects.map((projex) => {
                     return (
-                        <div key={projex.id} id={projex.id} className={` flex flex-col items-center  gap-6 transition-all`} >
+                        <div key={projex.id} id={projex.id} className={` project_section flex flex-col items-center  gap-6 transition-all`} >
                             <h3 className="text-center tracking-tight sm:tracking-normal text-sm lg:text-2xl border-b-2 border-color3 dark:border-color2 p-3 rounded-md">{projex.projectName}</h3>
                             {projex?.subHeading ? < p className="text-center">({projex.subHeading})</p> : ''}
                             <div className={`bg-transparent border-npne lg:border border-slate-300 dark:border-slate-600 p-3 lg:p-10 rounded-lg ${isScrolled ? 'fadeIn' : 'fadeOut'}`}>
                                 <Card>
-                                    <img src={projex.img} className="w-full lg:w-full lg:h-[490px]" />
+                                    <img src={projex.img} id='project' className=" w-full lg:w-full lg:h-[490px]" />
                                 </Card>
                             </div>
                             <div className="flex flex-col md:flex-row gap-5 sm:gap-6 md:gap-7 items-center">
@@ -117,9 +127,10 @@ export const FeaturedProjects = ({ isScrolled }) => {
                     )
                 })}
 
-
-
             </div>
+
+
+
         </section >
     )
 }
