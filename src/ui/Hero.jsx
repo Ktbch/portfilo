@@ -27,7 +27,7 @@ export const Hero = ({ menu }) => {
     }, []);
 
     return (
-        <section className={` ${menu ? 'hidden lg:block' : "block"} max-w-7xl mx-auto my-auto pt-5 pb-40 lg:border-b border-gray-300`}>
+        <section className={` ${menu ? 'hidden lg:block' : "block"} max-w-7xl mx-auto my-auto pt-5 pb-40 lg:border-b border-gray-300`} id="home">
             <div className="container space-y-10 m-auto
             lg:flex lg:flex-row lg:mt-10 lg:space-x-10 items-center">
                 <div className=" flex flex-col flex-wrap space-y-7 items-center lg:items-start">
@@ -49,3 +49,4 @@ export const Hero = ({ menu }) => {
         </section >
     )
 }
+// Todo smooth scroll for easy navigation

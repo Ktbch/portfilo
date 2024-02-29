@@ -15,12 +15,12 @@ export const Navbar = ({ menu, setMenu }) => {
 
     return (
         <nav className=" shadow-none  lg:shadow-sm  m-auto py-8 px-8 flex space-x-96  items-center dark:sahdow-none ">
-            <div className='text-color3 dark:text-color2 cursor-pointer'>
+            <div className='text-color3 dark:text-color2 cursor-pointer' id={'top'}>
                 DESIGNS.IO
             </div>
             <div className={` ${!menu ? 'hidden translate-x-full transition-all' : 'absolute translate-x-0  transition-all lg:relative '}  top-0.5 w-full py-20 pb-10 h-screen right-[0.4%] bg-gradient-to-tr from-slate-300 to-white dark:from-color1 dark:to-slate-600 lg:block lg:translate-x-0 lg:right-[0] lg:w-auto  lg:h-auto lg:relative lg:p-0 lg:bg-none`}>
                 <ul className={` flex flex-col space-y-16   lg:translate-x-0 lg:py-0 lg:shadow-none lg:space-y-0 lg:top-0 lg:left-0 lg:relative lg:mt-0  lg:flex lg:flex-row  max-w-xl m-auto  items-center lg:space-x-20 justify-between transition-all`}>
-                    <li><a href='/' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>Home</a></li>
+                    <li><a href='#home' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>Home</a></li>
                     <li><a href='' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all' >Contact</a></li>
                     <li><a href='' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>About Me</a></li>
                     <li><a href='#projects' className='cursor-pointer pb-3  border-color2 rounded-sm hover:border-b-4 transition-all'>Projects</a></li>
