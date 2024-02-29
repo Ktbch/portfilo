@@ -85,7 +85,7 @@ export const FeaturedProjects = ({ isScrolled, menu }) => {
     // Todoo put this function in the right place refactor this code
 
     return (
-        <section className={`${menu ? 'hidden' : 'block'} max-w-7xl mx-auto mt-10 py-20 px-10`}  >
+        <section className={`${menu ? 'hidden lg:block' : 'block'} max-w-7xl mx-auto mt-10 py-20 px-10`}  >
             <div className="flex flex-col items-center flex-wrap gap-32 ">
                 <h3 className="text-xl md:text-2xl lg:text-3xl dark:text-lightMode4-bgColorGray border-b-4 pb-4 rounded-md border-color2  dark:border-color3">Featured Projects</h3>
                 <div className={`main flex flex-col items-center flex-wrap  space-y-10 transition-all`} id="design_projects">
